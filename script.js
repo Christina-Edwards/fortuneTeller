@@ -30,3 +30,22 @@ function fortuneTeller(name, age) {
 
   return `${name} ${nameFortune}${ageFortune}`;
 }
+
+// DOM interaction
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("script.js loaded");
+
+  const form = document.getElementById("fortuneForm");
+  const output = document.getElementById("fortuneOutput");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById("nameInput").value.trim();
+    const age = parseInt(document.getElementById("ageInput").value, 10);
+
+    const result = fortuneTeller(name, age);
+    output.textContent = result;
+  });
+});
+
