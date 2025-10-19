@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <title>Fortune Teller</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Fortune Teller</h1>
-  <input type="text" id="nameInput" placeholder="Enter your name" />
-  <input type="number" id="ageInput" placeholder="Enter your age" />
-  <button id="tellFortuneBtn">Tell My Fortune</button>
+
+  <form id="fortuneForm">
+    <input type="text" id="nameInput" placeholder="Enter your name" required />
+    <input type="number" id="ageInput" placeholder="Enter your age" required />
+    <button type="submit">Reveal My Fortune</button>
+  </form>
+
   <p id="fortuneOutput"></p>
 
   <script src="script.js"></script>
 </body>
 </html>
+
